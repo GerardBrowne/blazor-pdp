@@ -1,16 +1,18 @@
 @page "/counter"
 
-<h1>Counter</h1>
+<MatBlazor.MatCard>
+    <h1 style="text-align:center">Counter</h1>
+    <p style="text-align:center">Current count: @currentCount</p>
+    <MatBlazor.MatButton @onclick="@IncrementCount">Click me</MatBlazor.MatButton>
+</MatBlazor.MatCard>
 
-<p>Current count: @currentCount</p>
-
-<button class="btn btn-primary" @onclick="@IncrementCount">Click me</button>
 
 @code {
-    int currentCount = 0;
+int currentCount = 0;
 
-    void IncrementCount()
-    {
-        currentCount++;
-    }
+void IncrementCount()
+{
+    currentCount++;
+}
+
 }

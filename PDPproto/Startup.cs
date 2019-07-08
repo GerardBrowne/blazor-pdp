@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PDPproto.Data;
+using EmbeddedBlazorContent;
 
 namespace PDPproto
 {
@@ -57,6 +58,8 @@ namespace PDPproto
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseEmbeddedBlazorContent(typeof(MatBlazor.BaseMatComponent).Assembly);
 
             app.UseAuthentication();
             app.UseAuthorization();

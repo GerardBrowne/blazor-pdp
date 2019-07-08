@@ -1,12 +1,13 @@
-@page "/"
+﻿@page "/"
 @namespace PDPproto.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-
+@using EmbeddedBlazorContent
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @Html.EmbeddedBlazorContent();
     <title>PDPproto</title>
     <base href="~/" />
     <environment include="Development">
